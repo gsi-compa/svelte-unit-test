@@ -20,7 +20,7 @@
   <div class="user-item__buttons-container">
     <button
       disabled={isOnlyItem}
-      class="user-items__buttons-container--action-button"
+      class="user-item__buttons-container--action-button"
       on:click={() => dispatch("delete", { index })}
     >
       Delete

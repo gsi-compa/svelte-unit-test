@@ -10,7 +10,7 @@
 
   $: totalUsers = initialUsers.length;
 
-  onMount(async () => {
+  onMount(() => {
     const firstNames = [
       "José",
       "Gabriel",
@@ -23,6 +23,7 @@
       "Juan",
       "Alberto",
     ];
+
     const lastNames = [
       "Companioni",
       "Benitez",
@@ -35,6 +36,7 @@
       "Ramos",
       "Bonucci",
     ];
+
     const temp = [];
     for (let index = 0; index < 10; index++) {
       temp.push({
