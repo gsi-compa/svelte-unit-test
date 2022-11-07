@@ -1,5 +1,10 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  export let isOnlyItem;
   export let user = null;
+  export let index;
+
+  const dispatch = createEventDispatcher();
 </script>
 
 <li class="user-item">
@@ -12,11 +17,21 @@
     {user.firstName}
     {user.lastName}
   </p>
+  <div class="user-item__buttons-container">
+    <button
+      disabled={isOnlyItem}
+      class="user-items__buttons-container--action-button"
+      on:click={() => dispatch("delete", { index })}
+    >
+      Delete
+    </button>
+  </div>
 </li>
 
 <style lang="scss">
   .user-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     &__active-indicator {
       width: 20px;
